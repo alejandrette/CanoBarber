@@ -1,0 +1,12 @@
+<section id="galeria">
+    <div class="container">
+      <h2 class="h2">Galería</h2>
+      <p class="lead">Aquí meterías fotos de cortes (por ahora, placeholders).</p>
+
+      <div class="grid" style="grid-template-columns: repeat(4, minmax(0,1fr)); margin-top: 18px;">
+        {Array.from({ length: 4 }).map(() => (
+          <div class="card" style="height: 440px; background: linear-gradient(135deg, rgba(245,193,75,.18), rgba(255,255,255,.03)); border:1px solid rgba(255,255,255,.08);"></div>
+        ))}
+      </div>
+    </div>
+  </section>
