@@ -1,6 +1,6 @@
 <section>
     <div class="container">
-      <div class="grid" style="grid-template-columns: 1.2fr .8fr; align-items:stretch;">
+      <div class="grid hero-grid">
         <div class="card" style="padding: 26px;">
           <span class="pill">✂️ Barber shop moderna</span>
           <h1 style="font-size: clamp(34px, 4vw, 52px); margin: 14px 0 8px;">
@@ -95,4 +95,32 @@
         </div>
       </div>
     </div>
-  </section>
+</section>
+
+<style>
+  /* HOME-only: Horario */
+  .horario{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 900px){
+    .precios-grid{
+      grid-template-columns: 1fr;
+      padding: 18px;
+    }
+  }
+
+  .hero-grid{
+    grid-template-columns: 1.2fr .8fr;
+    align-items: stretch;
+  }
+
+    @media (max-width: 900px){
+    .hero-grid{
+        grid-template-columns: 1fr; /* uno debajo del otro */
+    }
+    }
+</style>
