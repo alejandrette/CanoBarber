@@ -1,8 +1,7 @@
 <section id="precios">
   <div class="container">
-    <h2 class="h2 precios-title">Listado de precios</h2>
-
     <div class="precios-grid">
+      <h2 class="h2 precios-title">Listado de precios</h2>
       <!-- Columna izquierda -->
       <div class="precios-col">
         <article class="precio-item">
@@ -55,9 +54,9 @@
 <style>
     /* HOME-only: Precios estilo "menú" */
   .precios-title{
-    text-align: center;
-    margin-bottom: 26px;
-  }
+  grid-column: 1 / -1;
+  text-align: center;
+}
 
   .precios-grid{
     display: grid;
@@ -118,7 +117,7 @@
 /* 📱 Móvil */
 @media (max-width: 900px){
   .precios-grid{
-    grid-template-columns: 1fr; /* una sola columna */
+    grid-template-columns: 1fr;
   }
 }
 </style>

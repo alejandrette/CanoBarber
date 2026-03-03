@@ -17,16 +17,17 @@ const { title = "Cano Barber", description = "Barber shop | Cortes y barba con e
 
 <style is:global>
   :root{
-	--bg: #fdfdfd;
-	--card: #ffffff;
-	--text: #1e1e2a;
-	--muted: #7a7a8c;
+	--offWhite: rgba(255,243,219);
+	--brown: rgba(97,33,15);
+	--darkBrown: rgba(38, 14, 1);
 
-	--brand: #d6b3ff;
-	--brand-soft: #f3e8ff;
-	
-	--border: #ececf3;
-	--shadow: 0 10px 25px rgba(0,0,0,.05);
+	--card: #fffdf8;
+  --text: var(--darkBrown);
+  --muted: rgba(97,33,15,.65);
+
+  --border: rgba(97,33,15,.18);
+
+  --shadow: 0 12px 30px rgba(38,14,1,.12);
   }
 
   *{ box-sizing:border-box; }
@@ -34,7 +35,11 @@ const { title = "Cano Barber", description = "Barber shop | Cortes y barba con e
   body{
 	margin:0;
 	font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-	background: linear-gradient(180deg, #ffffff 0%, #faf9ff 100%);
+	background: linear-gradient(
+    180deg,
+    var(--brown) 0%,
+    #f7e7d6 100%
+  );
 	color: var(--text);
 	line-height: 1.5;
   }
@@ -64,52 +69,57 @@ const { title = "Cano Barber", description = "Barber shop | Cortes y barba con e
     white-space: nowrap;
   }
   
-  .btn{
+ .btn{
 	display:inline-flex;
 	align-items:center;
 	justify-content:center;
-	padding: 12px 16px;
+	padding: 8px 12px;
 	border-radius: 14px;
-	border: 1px solid var(--border);
-	background: #ffffff;
-	box-shadow: var(--shadow);
 	transition: all .2s ease;
-	font-weight: 600;
-	color: var(--text);
+	font-weight: 600;border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--darkBrown);
+  box-shadow: 0 6px 16px rgba(38,14,1,.08);
   }
 
 .btn:hover{
+  background: rgba(97,33,15,.06);
   transform: translateY(-2px);
-  background: var(--brand-soft);
 }
 
 .btn.primary{
-  background: var(--brand);
-  color: #ffffff;
-  border-color: var(--brand);
-}
-  .pill{
-  display:inline-block;
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  color: var(--muted);
-  background: #f8f7ff;
-  font-size: 13px;
+  background: var(--brown);
+  border-color: var(--brown);
+  color: var(--offWhite);
 }
 
-  section{ padding: 32px 0; }
-  .card{
-  border: 1px solid var(--border);
-  background: var(--card);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
+.btn.primary:hover{
+  background: var(--darkBrown);
 }
+
+  .pill{
+    display:inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(97,33,15,.25);
+    background: rgba(97,33,15,.08);
+    color: var(--brown);
+    font-size: 13px;
+  }
+
+  section{ padding: 32px 0; }
+  
+  .card{
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+  }
   .grid{ display:grid; gap: 16px; }
   .muted{ color: var(--muted); }
   .h2{ font-size: clamp(22px, 2.2vw, 30px); margin: 0 0 8px; }
   .lead{ font-size: 16px; color: var(--muted); margin: 0; }
-  .divider{ height:1px; background: var(--border); margin: 18px 0; }
+  .divider{ height:1px; background: rgba(97,33,15,.15); margin: 18px 0; }
 
   @media (max-width: 900px){
     section { padding: 16px 0; }
