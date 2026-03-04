@@ -1,19 +1,51 @@
+---
+const galeria = [
+  {
+    titulo: "Corte clásico",
+    descripcion: "Cortes limpios adaptados a tu estilo.",
+    imagen: "/photo1.jpg"
+  },
+  {
+    titulo: "Arreglo de barba",
+    descripcion: "Perfilado y diseño de barba con precisión.",
+    imagen: "/photo1.jpg"
+  },
+  {
+    titulo: "Corte moderno",
+    descripcion: "Fade y estilos actuales para un look moderno.",
+    imagen: "/photo1.jpg"
+  },
+  {
+    titulo: "Color / Mechas",
+    descripcion: "Mechas y color para dar personalidad a tu estilo.",
+    imagen: "/photo1.jpg"
+  }
+];
+---
+
 <section id="galeria">
   <div class="container">
     <div class="galeria-box">
       <h2 class="h2">Galería</h2>
 
       <div class="galeria-grid">
-        {Array.from({ length: 4 }).map(() => (
-          <div class="card galeria-item"></div>
+        {galeria.map((item) => (
+          <div class="galeria-item">
+            <img src={item.imagen} alt={item.titulo} />
+
+            <div class="galeria-overlay">
+              <h3>{item.titulo}</h3>
+              <p>{item.descripcion}</p>
+            </div>
+          </div>
         ))}
       </div>
+
     </div>
   </div>
 </section>
 
 <style>
-/* Caja exterior tipo precios */
 .galeria-box{
   padding: 26px;
   border: 1px solid var(--border);
@@ -22,7 +54,6 @@
   box-shadow: var(--shadow);
 }
 
-/* Grid */
 .galeria-grid{
   display: grid;
   grid-template-columns: repeat(4, minmax(0,1fr));
@@ -30,30 +61,66 @@
   margin-top: 18px;
 }
 
-/* Imagen */
+/* tarjeta */
 .galeria-item{
-  height: 440px;
-  background: linear-gradient(
-    135deg,
-    rgba(245,193,75,.18),
-    rgba(255,255,255,.03)
-  );
-  border: 1px solid rgba(255,255,255,.08);
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 16px;
 }
 
-/* 📱 Móvil */
+/* imagen */
+.galeria-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* overlay texto */
+.galeria-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 18px;
+
+  background: linear-gradient(
+    to top,
+    rgba(38,14,1,.85),
+    rgba(38,14,1,.0)
+  );
+
+  color: white;
+}
+
+.galeria-overlay h3{
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+
+.galeria-overlay p{
+  margin: 0;
+  font-size: 13px;
+  opacity: .9;
+}
+
+/* móvil */
 @media (max-width: 900px){
 
   .galeria-grid{
-    grid-template-columns: 1fr; /* 1 en 1 */
+    grid-template-columns: 1fr;
   }
 
   .galeria-item{
-    height: 260px; /* más pequeñas en móvil */
+    height: 260px;
   }
 
   .galeria-box{
-    padding: 18px; /* un poco más compacto */
+    padding: 18px;
   }
+
 }
 </style>

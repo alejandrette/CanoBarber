@@ -1,52 +1,33 @@
+---
+const precios = [
+  { nombre: "Corte de pelo", precio: "10€", descripcion: "Plasmamos con precisión la idea del estilo que deseas obtener, utilizando las técnicas y herramientas necesarias." },
+  { nombre: "Corte y barba", precio: "12€", descripcion: "Corte de pelo combinado con arreglo y perfilado de barba para conseguir un look completo y equilibrado." },
+  { nombre: "Arreglo barba", precio: "4€", descripcion: "Perfilado y arreglo de barba adaptado a tu estilo, cuidando cada detalle para un acabado limpio." },
+  { nombre: "Cejas", precio: "2€", descripcion: "Diseño y perfilado de cejas, limpieza y definición." },
+  { nombre: "Mechas", precio: "desde 15€", descripcion: "Aplicación de mechas para aportar luz, contraste y estilo al pelo." },
+  { nombre: "Decoloracion", precio: "desde 25€", descripcion: "Proceso de decoloración profesional para preparar el pelo antes de aplicar color o mechas." },
+  { nombre: "Lavado", precio: "2€", descripcion: "Lavado de pelo con productos profesionales para limpiar y preparar el pelo antes o después del servicio." }
+];
+---
+
 <section id="precios">
   <div class="container">
     <div class="precios-grid">
+
       <h2 class="h2 precios-title">Listado de precios</h2>
-      <!-- Columna izquierda -->
-      <div class="precios-col">
-        <article class="precio-item">
-          <div class="precio-top">
-            <h3>Corte de cabello</h3>
-            <span class="dots"></span>
-            <strong>18€</strong>
-          </div>
-          <p>
-            Plasmamos con precisión la idea del estilo que deseas obtener, utilizando las técnicas y herramientas necesarias.
-          </p>
-        </article>
 
+      {precios.map((servicio) => (
         <article class="precio-item">
           <div class="precio-top">
-            <h3>Rapado y barba</h3>
+            <h3>{servicio.nombre}</h3>
             <span class="dots"></span>
-            <strong>20€</strong>
+            <strong>{servicio.precio}</strong>
           </div>
-          <p>Rapado y perfilado de barba a tu gusto, para destacar tu estilo equilibrado.</p>
-        </article>
-      </div>
 
-      <!-- Columna derecha -->
-      <div class="precios-col">
-        <article class="precio-item">
-          <div class="precio-top">
-            <h3>Corte de cabello y barba</h3>
-            <span class="dots"></span>
-            <strong>23€</strong>
-          </div>
-          <p>
-            Realizamos el corte según tus especificaciones y definimos la barba conforme a tus indicaciones.
-          </p>
+          <p>{servicio.descripcion}</p>
         </article>
+      ))}
 
-        <article class="precio-item">
-          <div class="precio-top">
-            <h3>Cejas</h3>
-            <span class="dots"></span>
-            <strong>5€</strong>
-          </div>
-          <p>Diseño y perfilado de cejas, limpieza y definición.</p>
-        </article>
-      </div>
     </div>
   </div>
 </section>
