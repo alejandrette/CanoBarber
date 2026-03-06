@@ -13,6 +13,7 @@ import '../styles/global.css';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/logo_white.png" />
   </head>
   <body class="bg-dark-bg text-bone font-body leading-relaxed m-0 min-h-screen">
     <slot />
@@ -20,36 +21,27 @@ import '../styles/global.css';
 </html>
 
 <style is:global>
-  /* Mantenemos solo utilidades muy específicas que Tailwind 4
-     maneja mejor desde el CSS global o que son repetitivas.
-  */
   @import "tailwindcss";
 
   @theme {
-    /* Colores estilo Gentleman */
     --color-gold-primary: #C5A059;
     --color-dark-bg: #1A1A1B;
     --color-bone: #F5F5F5;
-    --color-dark-accent: #260E01; /* Basado en tu antiguo darkBrown para sombras */
+    --color-dark-accent: #260E01;
     
-    /* Tipografías */
     --font-titles: "Playfair Display", serif;
     --font-body: "Montserrat", sans-serif;
   }
 
-  /* Capas de componentes para limpiar el HTML de clases repetidas */
   @layer components {
-    /* Reemplazo de .container */
     .container-custom {
       @apply w-[min(1100px,92vw)] mx-auto;
     }
 
-    /* Reemplazo de section con tus media queries */
     .section-padding {
       @apply py-8 md:py-4; 
     }
 
-    /* Reemplazo de .btn y .btn.primary */
     .btn {
       @apply inline-flex items-center justify-center px-4 py-2 rounded-xl transition-all duration-200 font-semibold border border-white/10 bg-white/5 text-bone shadow-lg hover:-translate-y-0.5 hover:bg-white/10;
     }
@@ -58,7 +50,6 @@ import '../styles/global.css';
       @apply bg-gold-primary border-gold-primary text-dark-bg hover:bg-white hover:text-dark-bg;
     }
 
-    /* Reemplazo de .card */
     .card-custom {
       @apply border border-white/10 bg-white/5 rounded-2xl shadow-2xl p-6;
     }
@@ -77,6 +68,5 @@ import '../styles/global.css';
     }
   }
 
-  /* Reset de enlaces */
   a { @apply no-underline; color: inherit; }
 </style>
