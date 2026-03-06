@@ -1,99 +1,50 @@
-<section id="contacto">
-  <div class="container">
-    <div class="card contacto-wrapper">
-      <div class="contacto-head">
-        <h2 class="h2 contacto-main-title">Contacto</h2>
-        <p class="lead contacto-lead">Rellena esto y te confirmamos por WhatsApp.</p>
+<section id="contacto" class="section-padding">
+  <div class="container-custom">
+    <div class="card-custom max-w-2xl mx-auto">
+      
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl mb-3">Contacto</h2>
+        <p class="text-gray-400">Escríbenos y te confirmamos tu cita por WhatsApp.</p>
+        <div class="w-16 h-px bg-gold-primary mx-auto mt-4"></div>
       </div>
 
-        <h3 class="contacto-title">Datos rápidos</h3>
+      <div class="bg-white/5 border border-white/10 p-6 md:p-8 mb-8">
+        <h3 class="text-gold-primary font-titles text-xl mb-6 flex items-center gap-2 uppercase tracking-widest text-sm">
+          Datos rápidos
+        </h3>
 
-        <ul class="contacto-list">
-          <li>📍 Avda Constitución N 49, Don Benito</li>
-          <li>📞 <a href="tel:+34657774315">+34 657 77 43 15</a></li>
-          <li>✉️ <a href="mailto:hola@canobarber.com">hola@canobarber.com</a></li>
+        <ul class="space-y-4 text-bone/90">
+          <li class="flex items-start gap-3">
+            <span class="text-gold-primary">📍</span> 
+            <span>Avda Constitución N 49, Don Benito</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="text-gold-primary">📞</span> 
+            <a href="tel:+34657774315" class="hover:text-gold-primary transition-colors font-bold">+34 657 77 43 15</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="text-gold-primary">✉️</span> 
+            <a href="mailto:hola@canobarber.com" class="hover:text-gold-primary transition-colors font-bold">hola@canobarber.com</a>
+          </li>
         </ul>
+      </div>
 
-        <div class="divider"></div>
-
-        <a class="btn contacto-wa" href="https://wa.me/34657774315" target="_blank" rel="noreferrer">
-          <img src="/whatsapp.png" alt="WhatsApp" class="whatsapp-icon" />
+      <div class="space-y-4">
+        <a 
+          class="btn-primary flex items-center justify-center gap-3 py-4 text-base font-black uppercase tracking-[0.2em] transition-all duration-300 hover:scale-[1.02] border-2 border-gold-primary text-gold-primary hover:bg-gold-primary hover:text-dark-bg" 
+          href="https://wa.me/34657774315" 
+          target="_blank" 
+          rel="noreferrer"
+        >
+          <img src="/whatsapp.png" alt="WhatsApp" class="w-5 h-5 brightness-0 invert group-hover:invert-0" />
           Abrir WhatsApp
         </a>
+        
+        <p class="text-center text-xs text-gray-500 uppercase tracking-widest leading-relaxed">
+          Te respondemos lo antes posible en horario de barbería.
+        </p>
+      </div>
 
-        <p class="muted contacto-foot">Te respondemos lo antes posible en horario de barbería.</p>
     </div>
   </div>
 </section>
-
-<style>
-  .contacto-wrapper{
-  padding: 26px;
-}
-
-.contacto-head{
-  margin-bottom: 16px;
-}
-
-.contacto-main-title{
-  margin: 0 0 6px;
-}
-
-.contacto-lead{
-  margin: 0;
-}
-
-/* Caja interna tipo “panel” */
-.contacto-box{
-  padding: 18px;
-  border: 1px solid rgba(97,33,15,.18);
-  border-radius: 16px;
-  background: rgba(255,243,219,.55);
-}
-
-.contacto-title{
-  margin: 0 0 10px;
-  font-weight: 800;
-}
-
-.contacto-list{
-  margin: 0;
-  padding-left: 18px;
-  color: var(--muted);
-  display: grid;
-  gap: 8px;
-}
-
-.contacto-list a{
-  color: var(--brown);
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.contacto-list a:hover{
-  text-decoration: underline;
-}
-
-/* Botón WhatsApp más “brand” */
-.contacto-wa{
-  width: 100%;
-  justify-content: center;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Icono WA centrado y sin márgenes raros */
-.whatsapp-icon{
-  width: 18px;
-  height: 18px;
-  display: block;
-  margin: 0;
-  filter: none;
-}
-
-.contacto-foot{
-  margin: 12px 0 0;
-  font-size: 12px;
-}
-</style>

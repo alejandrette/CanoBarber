@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Colores Personalizados */
+    --color-gold-primary: #C5A059;
+    --color-dark-bg: #1A1A1B;
+    --color-bone: #F5F5F5;
+
+    /* Fuentes (Asegúrate de instalarlas después) */
+    --font-titles: "Playfair Display", serif;
+    --font-body: "Montserrat", sans-serif;
+  }
+}
+
+/* Reset básico para que el fondo siempre sea oscuro */
+@layer base {
+  body {
+    background-color: var(--color-dark-bg);
+    color: var(--color-bone);
+    font-family: var(--font-body);
+  }
+}

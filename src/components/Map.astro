@@ -1,47 +1,34 @@
-<section id="ubicacion">
-  <div class="container">
-    <div class="map-card">
-      <h2 class="h2">Donde estamos</h2>
-      <p class="lead">Avda Constitución N 49, Edificio Coliseo, Local 10, <span style="color: var(--brown); font-weight: 500;">Don Benito</span></p>
+<section id="ubicacion" class="section-padding">
+  <div class="container-custom">
+    <div class="card-custom">
+      <div class="mb-6">
+        <h2 class="text-3xl md:text-4xl mb-2 flex items-center gap-3">
+          <span class="w-10 h-px bg-gold-primary"></span> Dónde estamos
+        </h2>
+        <p class="text-gray-400 italic">
+          Avda Constitución N 49, Edificio Coliseo, Local 10, 
+          <span class="text-gold-primary font-bold not-italic ml-1 text-lg">Don Benito</span>
+        </p>
+      </div>
 
-      <div class="map-container">
+      <div class="relative overflow-hidden border border-white/10 group">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.3899655745527!2d-5.865113187639145!3d38.960762671592704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd145b03f7110919%3A0x18958b49c1e5300a!2sAv.%20de%20la%20Constituci%C3%B3n%2C%2049%2C%20Local%2010%2C%2006400%20Don%20Benito%2C%20Badajoz!5e0!3m2!1ses!2ses!4v1772464668398!5m2!1ses!2ses"
+          class="w-full h-[250px] md:h-[400px] border-0 block transition-all duration-700 group-hover:grayscale-0 group-hover:invert-0 group-hover:opacity-100"
           loading="lazy"
           allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade">
+          referrerpolicy="no-referrer-when-downgrade"
+        >
         </iframe>
+        
+        <div class="absolute inset-0 pointer-events-none border-2 border-gold-primary/0 group-hover:border-gold-primary/20 transition-all duration-500"></div>
+      </div>
+
+      <div class="mt-6 flex justify-center md:hidden">
+        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.3899655745527!2d-5.865113187639145!3d38.960762671592704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd145b03f7110919%3A0x18958b49c1e5300a!2sAv.%20de%20la%20Constituci%C3%B3n%2C%2049%2C%20Local%2010%2C%2006400%20Don%20Benito%2C%20Badajoz!5e0!3m2!1ses!2ses!4v1772464668398!5m2!1ses!2ses" target="_blank" class="btn btn-primary w-full text-center">
+          Abrir en Google Maps
+        </a>
       </div>
     </div>
   </div>
 </section>
-
-<style>
-    .map-card{
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 28px;
-    box-shadow: var(--shadow);
-    }
-
-    .map-container{
-    margin-top: 18px;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    }
-
-    .map-container iframe{
-    width: 100%;
-    height: 350px;
-    border: 0;
-    display: block;
-    }
-    
-@media (max-width: 768px){
-  .map-container iframe{
-    height: 250px;
-  }
-}
-</style>

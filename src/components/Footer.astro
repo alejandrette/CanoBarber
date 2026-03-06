@@ -1,24 +1,31 @@
-<footer style="padding: 36px 0; border-top:1px solid rgba(255,255,255,.08); background: rgba(0,0,0,.15);">
-  <div class="container" style="display:flex; gap: 12px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
-    <p class="muted" style="margin:0;">
-      © {new Date().getFullYear()} Cano Barber. Todos los derechos reservados.
-    </p>
+<footer class="py-12 mt-12 border-t border-white/5 bg-black/20">
+  <div class="container-custom flex flex-col md:flex-row gap-6 items-center justify-between">
+    
+    <div class="text-center md:text-left">
+      <p class="text-gray-500 text-sm mb-1">
+        © {new Date().getFullYear()} <span class="text-gold-primary font-bold">Cano Barber</span>. Todos los derechos reservados.
+      </p>
+      <p class="text-[10px] uppercase tracking-[0.2em] text-gray-600">
+        Diseñado por <a href="https://github.com/alejandrette" target="_blank" class="hover:text-gold-primary transition-colors italic">@alejandrette</a>
+      </p>
+    </div>
 
-    <div style="display:flex; gap: 10px; align-items:center;">
-      <a class="pill" href="https://wa.me/34657774315" target="_blank" rel="noreferrer"
-         style="display:inline-flex; align-items:center; justify-content:center; padding:8px 10px;">
-        <img src="/whatsapp.png" alt="WhatsApp" style="width:18px; height:18px; display:block;" />
+    <div class="flex items-center gap-3">
+      <a class="pill-custom flex items-center justify-center p-2.5 hover:bg-gold-primary hover:text-dark-bg transition-all duration-300 group" 
+         href="https://wa.me/34657774315" target="_blank" rel="noreferrer">
+        <img src="/whatsapp.png" alt="WhatsApp" class="w-4.5 h-4.5 brightness-0 invert group-hover:invert-0" />
       </a>
 
-      <a class="pill" href="https://www.instagr.am/cano.barberr/" target="_blank" rel="noreferrer"
-         style="display:inline-flex; align-items:center; justify-content:center; padding:8px 10px;">
-        <img src="/instagram.png" alt="Instagram" style="width:18px; height:18px; display:block;" />
+      <a class="pill-custom flex items-center justify-center p-2.5 hover:bg-gold-primary hover:text-dark-bg transition-all duration-300 group" 
+         href="https://www.instagr.am/cano.barberr/" target="_blank" rel="noreferrer">
+        <img src="/instagram.png" alt="Instagram" class="w-4.5 h-4.5 brightness-0 invert group-hover:invert-0" />
       </a>
 
-      <a class="pill" href="https://www.tiktok.com/@cano.barberr" target="_blank" rel="noreferrer"
-         style="display:inline-flex; align-items:center; justify-content:center; padding:8px 10px;">
-        <img src="/tiktok.png" alt="TikTok" style="width:18px; height:18px; display:block;" />
+      <a class="pill-custom flex items-center justify-center p-2.5 hover:bg-gold-primary hover:text-dark-bg transition-all duration-300 group" 
+         href="https://www.tiktok.com/@cano.barberr" target="_blank" rel="noreferrer">
+        <img src="/tiktok.png" alt="TikTok" class="w-4.5 h-4.5 brightness-0 invert group-hover:invert-0" />
       </a>
     </div>
+
   </div>
 </footer>

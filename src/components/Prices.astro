@@ -5,100 +5,44 @@ const precios = [
   { nombre: "Arreglo barba", precio: "4€", descripcion: "Perfilado y arreglo de barba adaptado a tu estilo, cuidando cada detalle para un acabado limpio." },
   { nombre: "Cejas", precio: "2€", descripcion: "Diseño y perfilado de cejas, limpieza y definición." },
   { nombre: "Mechas", precio: "desde 15€", descripcion: "Aplicación de mechas para aportar luz, contraste y estilo al pelo." },
-  { nombre: "Decoloracion", precio: "desde 25€", descripcion: "Proceso de decoloración profesional para preparar el pelo antes de aplicar color o mechas." },
+  { nombre: "Decoloración", precio: "desde 25€", descripcion: "Proceso de decoloración profesional para preparar el pelo antes de aplicar color o mechas." },
   { nombre: "Lavado", precio: "2€", descripcion: "Lavado de pelo con productos profesionales para limpiar y preparar el pelo antes o después del servicio." }
 ];
 ---
 
-<section id="precios">
-  <div class="container">
-    <div class="precios-grid">
+<section id="precios" class="section-padding">
+  <div class="container-custom">
+    <div class="card-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl mb-2">Listado de Precios</h2>
+        <div class="w-24 h-1 bg-gold-primary mx-auto"></div>
+      </div>
 
-      <h2 class="h2 precios-title">Listado de precios</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-10">
+        {precios.map((servicio) => (
+          <article class="group">
+            <div class="price-row mb-2">
+              <h3 class="font-bold text-lg tracking-wide group-hover:text-gold-primary transition-colors">
+                {servicio.nombre}
+              </h3>
+              <span class="price-dots opacity-30"></span>
+              <strong class="text-gold-primary text-lg font-black italic">
+                {servicio.precio}
+              </strong>
+            </div>
 
-      {precios.map((servicio) => (
-        <article class="precio-item">
-          <div class="precio-top">
-            <h3>{servicio.nombre}</h3>
-            <span class="dots"></span>
-            <strong>{servicio.precio}</strong>
-          </div>
+            <p class="text-sm text-gray-400 leading-relaxed max-w-prose">
+              {servicio.descripcion}
+            </p>
+          </article>
+        ))}
+      </div>
 
-          <p>{servicio.descripcion}</p>
-        </article>
-      ))}
-
+      <div class="mt-12 pt-8 border-t border-white/5 text-center">
+        <p class="text-xs uppercase tracking-[0.3em] text-gray-500">
+          Precios sujetos a variaciones según el trabajo realizado
+        </p>
+      </div>
     </div>
   </div>
 </section>
-
-<style>
-    /* HOME-only: Precios estilo "menú" */
-  .precios-title{
-  grid-column: 1 / -1;
-  text-align: center;
-}
-
-  .precios-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 34px;
-    padding: 26px;
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    background: var(--card);
-    box-shadow: var(--shadow);
-  }
-
-  .precios-col{
-    display: flex;
-    flex-direction: column;
-    gap: 26px;
-  }
-
-  .precio-item h3{
-    margin: 0;
-    font-size: 16px;
-    font-weight: 800;
-  }
-
-  .precio-item p{
-    margin: 10px 0 0;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-  .precio-top{
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
-  }
-
-  .precio-top strong{
-    font-weight: 900;
-    font-size: 16px;
-    color: var(--text);
-    white-space: nowrap;
-  }
-
-  .precio-dots{
-    flex: 1;
-    border-bottom: 1px dotted rgba(255,255,255,.28);
-    transform: translateY(-2px);
-    min-width: 20px;
-  }
-
-    .precios-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 34px;
-}
-
-/* 📱 Móvil */
-@media (max-width: 900px){
-  .precios-grid{
-    grid-template-columns: 1fr;
-  }
-}
-</style>

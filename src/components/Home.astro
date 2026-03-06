@@ -1,187 +1,86 @@
-<section>
-    <div class="container">
-      <div class="grid hero-grid">
-        <div class="card" style="padding: 26px;">
-          <span class="pill instagram-pill">
-            <a href="https://www.instagr.am/cano.barberr/" target="_blank" rel="noreferrer">
-              <img src="/instagram.png" alt="Instagram" class="insta-icon" />
-              <span>@cano.barberr</span>
-            </a>
-          </span>
-          <h1 style="font-size: clamp(34px, 4vw, 52px); margin: 14px 0 8px;">
-            Cortes limpios. <span style="color: var(--brown);">Barba perfecta.</span>
-          </h1>
-          <p class="lead" style="max-width: 60ch;">
-            Estilo clásico y moderno en el centro. Ven a relajarte, que aquí se sale guapo.
-          </p>
+<section class="section-padding">
+  <div class="container-custom">
+    <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-6 items-stretch">
+      
+      <div class="card-custom flex flex-col justify-center">
+        <span class="pill-custom w-fit mb-4">
+          <a href="https://www.instagr.am/cano.barberr/" target="_blank" rel="noreferrer" class="flex items-center gap-2 font-bold">
+            <img src="/instagram.png" alt="Instagram" class="w-3.5 h-3.5 brightness-0 invert sepia-[.5] saturate-[5] hue-rotate-[10deg]" />
+            <span>@cano.barberr</span>
+          </a>
+        </span>
+        
+        <h1 class="text-4xl md:text-5xl lg:text-6xl mb-4 leading-tight">
+          Cortes limpios. <span class="text-gold-primary">Barba perfecta.</span>
+        </h1>
+        
+        <p class="text-gray-400 text-lg max-w-[60ch] mb-8">
+          Estilo clásico y moderno en el centro. Ven a relajarte, que aquí se sale guapo.
+        </p>
 
-          <div style="display:flex; gap: 10px; flex-wrap:wrap; margin-top: 18px;">
-            <a class="btn primary" style="display: none;" href="#contacto">Reservar cita</a> {/* Botón de reserva, oculto por ahora */}
-            <a class="btn" href="#precios">Ver precios</a>
-          </div>
-
-          <div class="divider"></div>
-
-          <div class="grid" style="grid-template-columns: repeat(3, minmax(0,1fr));">
-            <div>
-              <div style="font-weight:800; font-size: 18px;">+100</div>
-              <div class="muted" style="font-size: 13px;">Clientes felices</div>
-            </div>
-            <div>
-              <div style="font-weight:800; font-size: 18px;">4.9★</div>
-              <div class="muted" style="font-size: 13px;">Valoración media</div>
-            </div>
-            <div>
-              <div style="font-weight:800; font-size: 18px;">30 min</div>
-              <div class="muted" style="font-size: 13px;">de corte</div>
-            </div>
-          </div>
+        <div class="flex flex-wrap gap-3 mb-8">
+          <a class="btn border-gold-primary/50 text-gold-primary hover:bg-gold-primary hover:text-dark-bg" href="#precios">Ver precios</a>
         </div>
 
-        <div class="card" style="padding: 26px; display:flex; flex-direction:column; justify-content:space-between;">
-        	<div>
-				<h2 class="h2">Horario</h2>
+        <div class="h-px bg-white/10 w-full mb-8"></div>
 
-				<div class="horario">
-					<div class="fila">
-						<span>Lunes</span>
-						<span class="dots"></span>
-						<span>15:00-20:00</span>
-					</div>
-
-					<div class="fila">
-						<span>Martes</span>
-						<span class="dots"></span>
-						<span>9:00-20:00</span>
-					</div>
-
-					<div class="fila">
-						<span>Miércoles</span>
-						<span class="dots"></span>
-						<span>9:00-14:00</span>
-					</div>
-
-					<div class="fila">
-						<span>Miércoles - (Santa Amalia)</span>
-						<span class="dots"></span>
-						<span>16:00-20:00</span>
-					</div>
-
-					<div class="fila">
-						<span>Jueves</span>
-						<span class="dots"></span>
-						<span>9:00-20:00</span>
-					</div>
-
-					<div class="fila">
-						<span>Viernes</span>
-						<span class="dots"></span>
-						<span>9:00-20:00</span>
-					</div>
-
-					<div class="fila">
-						<span>Sábado</span>
-						<span class="dots"></span>
-						<span>9:00-14:00</span>
-					</div>
-				</div>
-			</div>
-
-          <div class="divider"></div>
-
+        <div class="grid grid-cols-3 gap-4">
           <div>
-            <h2 class="h2">Dirección</h2>
-            <p class="lead">Avda Constitución N 49, Edificio Coliseo, Local 10, <span style="color: var(--brown); font-weight: 500;">Don Benito</span></p>
-            <div class="contact-actions">
-              <a class="btn" href="https://maps.app.goo.gl/S8QMCaPnrYZMEdur6" target="_blank" rel="noreferrer"><img src="/map.png" alt="Maps" class="icon" />Maps</a>
-              <a class="btn" href="tel:+34657774315"><img src="/phone.png" alt="Phone" class="icon" />Llamar</a>
-              <a class="btn" href="https://wa.me/34657774315" target="_blank" rel="noreferrer"><img src="/whatsapp.png" alt="WhatsApp" class="icon" />WhatsApp</a>
-            </div>
+            <div class="text-xl font-bold text-gold-primary">+100</div>
+            <div class="text-xs uppercase tracking-tighter text-gray-500">Clientes felices</div>
+          </div>
+          <div>
+            <div class="text-xl font-bold text-gold-primary">4.9★</div>
+            <div class="text-xs uppercase tracking-tighter text-gray-500">Valoración</div>
+          </div>
+          <div>
+            <div class="text-xl font-bold text-gold-primary">30 min</div>
+            <div class="text-xs uppercase tracking-tighter text-gray-500">Por servicio</div>
           </div>
         </div>
       </div>
+
+      <div class="card-custom flex flex-col justify-between gap-8">
+        <div>
+          <h2 class="text-2xl mb-6 flex items-center gap-2">
+            <span class="w-8 h-px bg-gold-primary"></span> Horario
+          </h2>
+
+          <div class="space-y-3">
+            <div class="price-row"><span>Lunes</span><span class="price-dots"></span><span>15:00 - 20:00</span></div>
+            <div class="price-row"><span>Martes</span><span class="price-dots"></span><span>9:00 - 20:00</span></div>
+            <div class="price-row"><span>Miércoles</span><span class="price-dots"></span><span>9:00 - 14:00</span></div>
+            <div class="price-row text-gold-primary/80"><span class="text-xs italic">Miércoles (Sta. Amalia)</span><span class="price-dots"></span><span class="text-xs">16:00 - 20:00</span></div>
+            <div class="price-row"><span>Jueves</span><span class="price-dots"></span><span>9:00 - 20:00</span></div>
+            <div class="price-row"><span>Viernes</span><span class="price-dots"></span><span>9:00 - 20:00</span></div>
+            <div class="price-row font-bold text-gold-primary"><span>Sábado</span><span class="price-dots"></span><span>9:00 - 14:00</span></div>
+          </div>
+        </div>
+
+        <div class="h-px bg-white/10 w-full"></div>
+
+        <div>
+          <h2 class="text-2xl mb-4 flex items-center gap-2">
+            <span class="w-8 h-px bg-gold-primary"></span> Dirección
+          </h2>
+          <p class="text-gray-400 mb-6 italic">
+            Avda Constitución N 49, Edificio Coliseo, Local 10, <span class="text-gold-primary font-semibold not-italic">Don Benito</span>
+          </p>
+          
+          <div class="flex flex-wrap gap-2">
+            <a class="btn py-2 px-4 text-xs flex items-center gap-2 border-white/10 hover:border-gold-primary" href="https://maps.google.com" target="_blank">
+              <img src="/map.png" alt="Maps" class="w-3.5 h-3.5 brightness-0 invert opacity-70" /> Maps
+            </a>
+            <a class="btn py-2 px-4 text-xs flex items-center gap-2 border-white/10 hover:border-gold-primary" href="tel:+34657774315">
+              <img src="/phone.png" alt="Phone" class="w-3.5 h-3.5 brightness-0 invert opacity-70" /> Llamar
+            </a>
+            <a class="btn py-2 px-4 text-xs flex items-center gap-2 border-white/10 hover:border-gold-primary" href="https://wa.me/34657774315" target="_blank">
+              <img src="/whatsapp.png" alt="WhatsApp" class="w-3.5 h-3.5 brightness-0 invert opacity-70" /> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
-
-<style>
-  /* HOME-only: Horario */
-  .horario{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 10px;
-  }
-
-  @media (max-width: 900px){
-    .precios-grid{
-      grid-template-columns: 1fr;
-      padding: 18px;
-    }
-  }
-
-  .hero-grid{
-    grid-template-columns: 1.2fr .8fr;
-    align-items: stretch;
-  }
-
-    @media (max-width: 900px){
-    .hero-grid{
-        grid-template-columns: 1fr; /* uno debajo del otro */
-    }
-    }
-
-    .instagram-pill a{
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--brown);
-      font-weight: bold;
-    }
-
-  .insta-icon{
-    width: 14px;
-    height: 14px;
-    filter: brightness(0) saturate(100%) 
-            invert(17%) sepia(44%) saturate(1254%) 
-            hue-rotate(346deg) brightness(93%) contrast(94%);
-  }
-
-.instagram-pill{
-  border: 1px solid rgba(97,33,15,.25);
-  background: rgba(97,33,15,.08);
-  color: var(--brown);
-}
-
-.icon{
-  width: 16px;
-  height: 16px;
-  display: block;
-  flex: 0 0 16px;
-  margin-right: 8px;
-
-  filter: brightness(0) saturate(100%)
-          invert(17%) sepia(44%) saturate(1254%)
-          hue-rotate(346deg) brightness(93%) contrast(94%);
-}
-
-.contact-actions{
-  margin-top: 14px;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-/* Botones más pequeños solo en dirección */
-.contact-actions .btn{
-  font-size: 13px;
-  padding: 8px 12px;
-  border-radius: 12px;
-}
-
-/* Iconos un poco más pequeños también */
-.contact-actions .icon{
-  width: 14px;
-  height: 14px;
-  flex: 0 0 14px;
-}
-</style>

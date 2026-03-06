@@ -8,119 +8,48 @@ const galeria = [
   {
     titulo: "Arreglo de barba",
     descripcion: "Perfilado y diseño de barba con precisión.",
-    imagen: "/photo1.jpg"
+    imagen: "/photo2.jpg"
   },
   {
     titulo: "Corte moderno",
     descripcion: "Fade y estilos actuales para un look moderno.",
-    imagen: "/photo1.jpg"
+    imagen: "/photo3.jpg"
   },
   {
     titulo: "Color / Mechas",
     descripcion: "Mechas y color para dar personalidad a tu estilo.",
-    imagen: "/photo1.jpg"
+    imagen: "/photo4.jpg"
   }
 ];
 ---
 
-<section id="galeria">
-  <div class="container">
-    <div class="galeria-box">
-      <h2 class="h2">Galería</h2>
+<section id="galeria" class="section-padding">
+  <div class="container-custom">
+    <div class="card-custom">
+      <h2 class="text-3xl md:text-4xl mb-8 flex items-center gap-3">
+        <span class="w-10 h-px bg-gold-primary"></span> Galerida
+      </h2>
 
-      <div class="galeria-grid">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {galeria.map((item) => (
-          <div class="galeria-item">
-            <img src={item.imagen} alt={item.titulo} />
+          <div class="relative group h-[420px] md:h-[350px] lg:h-[420px] overflow-hidden rounded-none border border-white/10">
+            <img 
+              src={item.imagen} 
+              alt={item.titulo} 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
 
-            <div class="galeria-overlay">
-              <h3>{item.titulo}</h3>
-              <p>{item.descripcion}</p>
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/20 to-transparent flex flex-col justify-end p-6">
+              <h3 class="text-gold-primary font-titles text-xl mb-1 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                {item.titulo}
+              </h3>
+              <p class="text-bone/80 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {item.descripcion}
+              </p>
             </div>
           </div>
         ))}
       </div>
-
     </div>
   </div>
 </section>
-
-<style>
-.galeria-box{
-  padding: 26px;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: var(--card);
-  box-shadow: var(--shadow);
-}
-
-.galeria-grid{
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0,1fr));
-  gap: 18px;
-  margin-top: 18px;
-}
-
-/* tarjeta */
-.galeria-item{
-  position: relative;
-  height: 420px;
-  overflow: hidden;
-  border-radius: 16px;
-}
-
-/* imagen */
-.galeria-item img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* overlay texto */
-.galeria-overlay{
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-
-  padding: 18px;
-
-  background: linear-gradient(
-    to top,
-    rgba(38,14,1,.85),
-    rgba(38,14,1,.0)
-  );
-
-  color: white;
-}
-
-.galeria-overlay h3{
-  margin: 0 0 4px;
-  font-size: 18px;
-}
-
-.galeria-overlay p{
-  margin: 0;
-  font-size: 13px;
-  opacity: .9;
-}
-
-/* móvil */
-@media (max-width: 900px){
-
-  .galeria-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .galeria-item{
-    height: 260px;
-  }
-
-  .galeria-box{
-    padding: 18px;
-  }
-
-}
-</style>
