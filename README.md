@@ -1,46 +1,47 @@
-# Astro Starter Kit: Basics
+# 💈 CanoBarber
 
-```sh
-npm create astro@latest -- --template basics
-```
+Sitio web moderno para una barbería, diseñado para mostrar servicios, estilo y facilitar que los clientes conozcan el negocio.
+El objetivo del proyecto es ofrecer una página clara, elegante y responsive para una barbería profesional.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Descripción
 
-## 🚀 Project Structure
+CanoBarber es una web desarrollada para representar digitalmente una barbería.
+Incluye secciones típicas de un negocio de este tipo como:
 
-Inside of your Astro project, you'll see the following folders and files:
+- presentación del negocio
+- servicios
+- galería
+- contacto
+- diseño responsive
+- El proyecto está pensado como una landing page sencilla pero visual, ideal para aprender o practicar desarrollo web.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## 🧰 Tecnologías utilizadas
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+El proyecto está desarrollado con tecnologías básicas del desarrollo web:
+- HTML5 → estructura de la página
+- CSS3 → estilos y diseño visual
+- JavaScript → interactividad
+- Flexbox / Grid → layout responsive
 
-## 🧞 Commands
+## 🎯 Funcionalidades
 
-All commands are run from the root of the project, from a terminal:
+- Página principal atractiva
+- Diseño responsive para móvil y ordenador
+- Sección de servicios
+- Galería de imágenes
+- Información de contacto
+- Navegación simple y clara
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 📸 Preview
 
-## 👀 Want to learn more?
+La página muestra:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+[Cano Barber](https://canobarber.netlify.app/)
+
+## 👤 Autor
+
+Desarrollado por:
+
+Alejandro
+GitHub:
+👉 https://github.com/alejandrette
